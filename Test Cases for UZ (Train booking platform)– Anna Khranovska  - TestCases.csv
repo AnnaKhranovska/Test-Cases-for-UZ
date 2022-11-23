@@ -1,0 +1,137 @@
+ID,Summary (Title),Additional info,Steps,Expected Result,Priority,Pass/Fail,Bug #
+OVERVIEW: ,Test cases for the UZ (train booking platform) mobile application.,,,,,,
+COMMON ADDITIONAL INFO: ,"Testing environment: 
+Version: 1.0.4(4)
+iPhone 13
+OS: iOS 15.7.1
+",,,,,,
+UZ-001,User should be able to register with active mobile number,"Test data example:
+- Use any active number with access into it","1. Run the app 
+2. Enter phone number 
+3. Tap [Підтвердити] button 
+4. Enter code from sms",The user received a message with a code and successfuly registered ,Critical,Passed,
+UZ-002,"User should be able to login into app with valid creds
+","Test data example:
+- Use code from recieved message","1. Run the app 
+2. Enter phone number 
+3. Tap [Підтвердити] button 
+4. Enter code from sms","User successfully log in: 
+- user is redirected to the main page",Critical,Passed,
+UZ-003,User should be able to search tickets,"User is logged in
+Test data example:
+Destination from: Kyiv
+Destination to: Odesa
+","1. Tap on [Звідки] button
+2. Choose the destination from
+3. Tap on [Куди] button
+4. Choose the destination to
+5. Choose the needed date
+6. Tap on [Знайти] button",A list of trains with available tickets is displayed,Critical,Passed,
+UZ-004,User should be able to choose the train,"User is logged in
+Test data example:
+Destination from: Kyiv
+Destination to: Odesa
+","1. Tap on [Звідки] button
+2. Choose the destination 
+3. Tap on [Куди] button
+4. Choose the destination
+5. Choose the needed date
+6. Tap on [Знайти] button
+7. Observe the result
+8. Tap on needed train",List of carriages with available places is displayed,Critical,passed,
+UZ-005,User should be able to choose the available places,"User is logged in
+Test data example:
+Destination from: Kyiv
+Destination to: Odesa","1. Choose the destination
+2. Choose the needed date 
+3. Tap on [Знайти] button
+4. Select needed train
+4. Tap on carrige type 
+5. Choose one or several available places
+6. Tap on [Вибрати] button","Selected places in the carrige were highlighted and ""passenger data"" screen is opened",Critical,passed,
+UZ-006,User should able to pay for the tickets with Apple Pay,"User is logged in
+Test data example:
+Destination from: Kyiv
+Destination to: Odesa
+Ім'я: Віталій
+Прізвище: Кім","1. Choose the destination  
+2. Choose the needed date 
+3. Tap on [Знайти] button 
+4. Choose carriage type 
+5. Choose the free place
+6. Tap on [Вибрати] button
+7. Enter data of passenger
+8. Сhoose ticket type
+9. Tap on [Підтвердити] button
+10. Tap on [До оплати] button
+11. Tap on [Pay] button",Payment is successful and ticket is booked,High,passed,
+UZ-007,User should be able to pay for the tickets with Credit Card,"User is logged in 
+Test data example: 
+Destination from: Kyiv
+Destination to: Odesa
+Ім'я: Віталій 
+Прізвище: Кім","1. Choose the destination 
+2. Choose the needed date 
+3. Tap on [Знайти] button 
+4. Choose carriage type 
+5. Choose the free place
+6. Tap on [Вибрати] button
+7. Enter data of passenger
+8. Сhoose ticket type
+9. Tap on [Підтвердити] button
+10. Tap on [До оплати] button
+11. Tap on [arrow] button
+12.Choose credit card
+13. Tap on [Oплатити] button",Payment is successful and ticket is booked,Critical,passed,
+UZ-008,User should be able to view tickets info,"User is logged in 
+","1. Tap on [Квитки] button
+2. Tap on [Показати квиток]
+3. Observe info about tickets
+",Tickets info is displayed,Critical,passed,
+UZ-009,User should be able to find purchased tickets in the archive ,"User is logged in 
+","1. Tap on [Квитки] button
+2. Tap on [Aрхів квитків]
+3. Observe all purchased tickets",Tickets info is displayed in the archive,Medium,passed,
+UZ-010,User should be able to add purshased tickets to the Wallet,"User is logged in 
+
+","1. Tap on [Квитки] button
+2. Tap on [Показати квиток]
+3. Tap on [Додати до Гаманець Apple]
+4. Tap on [Додати]",Purchased ticket was successufy added to a Wallet,Low,passed,
+UZ-011,User should be able to edit profile,"User is logged in
+","1. Tap on [Профіль]
+2. Таp on [Мої дані]
+3. Edit profile",Profile data is updated,Medium,passed,
+UZ-012,User should be able to add new passengers,"User is logged in
+","1. Tap on [Профіль]
+2. Tap on [Пасажири]
+3. Tap on [+ Додати пасажира]
+4. Add passenger data
+5. Tap on [Зберегти]",New passanger was successfully added,Medium,passed,
+UZ-013,User should be able to edit passengers data,"User is logged in
+","1. Tap on [Профіль]
+2. Tap on [Пасажири]
+3. Tap on passenger(For Example Vitalik Kim)
+4. Edit passenger data
+5. Tap on [Зберегти]",Passenger data was successfully edited,Low,passed,
+UZ-014,User should be able to configure notifications ,"User is logged in
+","1. Tap on [Профіль]
+2. Tap on [Сповіщення]
+3. Tap on [Settings] icon
+4. Tap on pop-up [Дозволити сповіщення]
+5. Turn ON/Turn Off toggles ",Notifications was successfully configurated,Medium,passed,
+UZ-015,User should be able to view all notifications,"User is logged in
+","1. Tap on [Профіль]
+2. Tap on [Сповіщення]
+3. Observe notifications",List of notifications is displayed,Medium,passed,
+UZ-016,"User should be able to send a message via ""Зворотній Зв'язок""","User is logged in
+Test data example:
+email data: vitaliy@qa.team
+Тема: запитання про рейси
+message data: Will train 388 go to Kherson region in December?","1. Tap on [Профіль]
+2. Tap on [Зворотній зв'язок]
+3. Enter email data 
+4. Choose [Тема] 
+5. Enter message data
+6. Add a picture ( if neded)
+7. Tap on [Відправити]",User feedback was successfully sent,Low,passed,
